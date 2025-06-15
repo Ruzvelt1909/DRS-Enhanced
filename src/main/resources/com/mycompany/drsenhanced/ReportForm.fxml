@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.drsenhanced.ReportController">
+    <children>
+        <VBox alignment="TOP_LEFT" spacing="10.0" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Disaster Type:" />
+            <TextField fx:id="typeField" promptText="e.g., Fire, Earthquake" />
+
+            <Label text="Description:" />
+            <TextArea fx:id="descField" promptText="Describe the disaster..." prefRowCount="4" onKeyReleased="#handleDescriptionKey"/>
+
+            <Label text="Address:" />
+            <TextField fx:id="addressField" promptText="e.g., 123 Main St" />
+
+            <Label text="Priority:" />
+            <ComboBox fx:id="priorityCombo" prefWidth="200"/>
+
+            <Label text="Status:" />
+            <ComboBox fx:id="statusCombo" prefWidth="200"/>
+
+            <Button fx:id="submitButton" text="Submit Report" onAction="#handleSubmit" />
+            <Button fx:id="dashboardButton" text="Go to Dashboard" onAction="#handleGoToDashboard" />
+
+        </VBox>
+    </children>
+</AnchorPane>
